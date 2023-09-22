@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Croissant+One&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(236, 73, 4), rgb(183, 192, 19));
+  padding: 2%;
+}
+.todo {
+  width: 100%;
+  max-width: 540px;
+  background-color: white;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todo h2 {
+  color: #002765;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  /* margin-bottom: 25px; */
+  margin-top: 20px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-weight: 15px;
+  background-color: #cc0ae2;
+  color: white;
+  border-radius: 30px;
+}
+#tasklist li {
+  list-style: none;
+  font-size: 1rem;
+  font-family: "Anton", sans-serif;
+  color: rgb(78, 3, 3);
+  padding: 15px 20px 10px 50px;
+  position: relative;
+}
+ul li::before {
+  content: " ";
+  position: absolute;
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url("./images/unchecked.png");
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  height: 40px;
+  width: 40px;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover {
+  color: #cc0ae2;
+  cursor: pointer;
+}
+.checked::before {
+  cursor: pointer;
+  position: absolute;
+  color: green;
+  text-decoration: line-through;
+  background-image: url("./images/checked.png");
+  background-size: cover;
+  height: 28px;
+  width: 28px;
+  top: 12px;
+  left: 8px;
+  border-radius: 50%;
+}
